@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Analysis System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📂 File Analysis System</h1>
+
+    <!-- Upload Form -->
+    <form id="uploadForm">
+        <input type="file" id="fileInput" required />
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- File List -->
+    <div id="fileListSection">
+        <h2>Uploaded Files</h2>
+        <table id="fileTable">
+            <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Status</th>
+                <th>Created At</th>
+            </tr>
+            </thead>
+            <tbody id="fileTableBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Results Modal -->
+<div id="resultModal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2 id="modalFilename"></h2>
+        <pre id="modalResult"></pre>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

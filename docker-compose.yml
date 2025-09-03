@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  upload_service:
+    build:
+      context: ./upload_service
+      dockerfile: Dockerfile
+    container_name: upload_service
+    env_file: ./upload_service/.env
+    ports:
+      - "5001:5001"
+    depends_on:
+      - orchestrator_service
+
+  orchestrator_service:
+    build:
+      context: ./orchestrator_service
+      dockerfile: Dockerfile
+    container_name: orchestrator_service
+    env_file: ./orchestrator_service/.env
+    restart: always
+
+  text_analysis_service:
+    build:
+      context: ./text_analysis_service
+      dockerfile: Dockerfile
+    container_name: text_analysis_service
+    env_file: ./text_analysis_service/.env
+    ports:
+      - "5002:5002"
+
+  image_analysis_service:
+    build:
+      context: ./image_analysis_service
+      dockerfile: Dockerfile
+    container_name: image_analysis_service
+    env_file: ./image_analysis_service/.env
+    ports:
+      - "5003:5003"

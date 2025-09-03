@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #007bff;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #f0f0f0;
+}
+
+.clickable {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.clickable:hover {
+    text-decoration: underline;
+}
+
+/* Status badges */
+.status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+}
+
+.status-pending {
+    background: #f0ad4e; /* yellow */
+}
+
+.status-done {
+    background: #5cb85c; /* green */
+}
+
+.status-error {
+    background: #d9534f; /* red */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+
+#modalResult {
+    white-space: pre-wrap;     /* preserve newlines, wrap long lines */
+    word-break: break-word;    /* break long words if needed */
+    max-height: 400px;         /* limit height */
+    overflow-y: auto;          /* vertical scroll if too tall */
+    overflow-x: hidden;        /* no horizontal scroll */
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    overflow-y: auto;   /* vertical scroll when needed */
+    overflow-x: hidden; /* prevent horizontal scroll */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
